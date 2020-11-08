@@ -13,6 +13,6 @@ RUN \
 WORKDIR /DemoETL
 ADD . /DemoETL
 
-RUN rm -r /DemoETL/database/ /DemoETL/dataset_clean.csv
+RUN rm -r /DemoETL/database/ /DemoETL/system-design /DemoETL/dataset_clean.csv
 
 CMD sbt pipeline/run

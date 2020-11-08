@@ -38,3 +38,6 @@ Start Postgres
 ```
 docker run -d --name pg-demo -p 5432:5432 demo_postgres
 ```
+
+## Task 3: System Design
+Powerpoint diagram is located at `system-design/SystemArch.pptx`
