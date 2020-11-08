@@ -44,3 +44,7 @@ lazy val pipeline = (project in file("data-pipeline"))
     test in assembly := {}
   )
   .settings(libraryDependencies ++= Dependencies.implDeps)
+
+
+lazy val databases = (project in file("database"))
+  .settings(baseSettings: _*)

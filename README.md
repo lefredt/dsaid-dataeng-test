@@ -1,9 +1,11 @@
+## Task 1 Data Pipelines
+
 #### Copy of transformed csv
-dataset_clean.csv
+See `dataset_clean.csv`
 
 #### Running the service
 
-Build docker image with Dockerfile
+Build docker image with Dockerfile on the root path
 ```
 docker build -t dsaid:v1 .
 ```
@@ -22,4 +24,17 @@ Set up cron job to run daily at 2am
 ```
 crontab -e
 0 2 * * * <Absolute path to folder of choice>/cron-dsaid-test.sh
+```
+
+## Task 2: Databases
+The initial create table sql scripts are found in `database/database-script/CreateFirst.sql`  
+An ER Diagram auto generated with [DBeaver](https://dbeaver.io/) can be seen at `database/er-diag.png`
+
+Build docker image with Dockerfile on the `database` folder
+```
+docker build -t demo_postgres .
+```
+Start Postgres
+```
+docker run -d --name pg-demo -p 5432:5432 demo_postgres
 ```
